@@ -6,7 +6,7 @@
     --accent1-color: #EFEFF0;
     --accent2-color: #102B3F;
     --heading-font: Oswald, sans-serif;
-    --default-font: Montserrat, sans-serif;
+    --paragraph-font: Montserrat, sans-serif;
     --nav-background-color: var(--accent1-color);
     --nav-link-color: var(--accent2-color);
     --nav-hover-link-color: var(--accent1-color);
@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: var(--default-font);
+    font-family: var(--paragraph-font);
     max-width: 960px;
     padding: 20px;
     text-align: justify;
