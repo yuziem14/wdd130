@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Oswald:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #3993DD;
+    --secondary-color: #ff7900;
+    --accent1-color: #EFEFF0;
+    --accent2-color: #102B3F;
+    --paragraph-color: #333;
+    --heading-font: Oswald, sans-serif;
+    --paragraph-font: Montserrat, sans-serif;
+    --nav-background-color: var(--accent1-color);
+    --nav-link-color: var(--accent2-color);
+    --nav-hover-link-color: var(--accent1-color);
+    --nav-hover-background-color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--accent2-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p, header nav a {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color);
+}
+
+main, footer {
+    width: 72vw;
+}
+
+/* CSS Class Selectors */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero article img {
+    float: right;
+    width: 200px;
+    margin-left: 1rem;
+}
+
+.hero h1, .hero article {
+    position: absolute;
+}
+
+.hero h1 {
+    color: var(--accent1-color);
+    width: 100%;
+    top: 1rem;
+    left: 20rem;
+}
+
+.hero article {
+    width: 88%;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 18rem;
+    left: 3rem;
+    padding: 1rem;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 64px;
+}
