@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Oswald:wght@300;400;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #3993DD;
     --secondary-color: #ff7900;
@@ -11,7 +17,7 @@
     --nav-background-color: var(--accent1-color);
     --nav-link-color: var(--accent2-color);
     --nav-hover-link-color: var(--accent1-color);
-    --nav-hover-background-color: var(--primary-color);
+    --nav-hover-background-color: var(--accent2-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,13 +38,75 @@ p, header nav a {
     color: var(--paragraph-color);
 }
 
-main, footer {
+header, main, footer {
     width: 72vw;
+    margin: 0 auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+
+header img {
+    justify-self: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    display: block;
+    color: var(--nav-link-color);
+    background-color: var(--nav-background-color);
+    padding: 1rem;
+    text-align: center;
+    border-right: 1px solid var(--accent2-color);
+    text-decoration: none;
+}
+
+header nav a:last-child {
+    border: none;
+}
+
+header nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+}
+
+header nav a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+    transition: 0.2s;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    /* margin-top: 1rem; */
+}
+
+footer p {
+    color: var(--accent1-color);
+    flex-grow: 2;
+    text-align: center;
 }
 
 /* CSS Class Selectors */
 .hero {
     position: relative;
+}
+
+.hero p {
+    text-align: justify;
 }
 
 .hero img {
@@ -59,23 +127,94 @@ main, footer {
 
 .hero h1 {
     color: var(--accent1-color);
-    width: 100%;
-    top: 1rem;
-    left: 20rem;
+    width: auto;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .hero article {
     width: 88%;
     background-color: rgba(255, 255, 255, 0.6);
-    top: 18rem;
-    left: 3rem;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 1rem;
+}
+
+.history-section {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+    background-color: var(--accent1-color);
+    /* margin-top: 1rem; */
+}
+
+.history-section img {
+    width: 320px;
+    box-shadow: 2px 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.history-section div {
+    display: flex;
+    flex-flow: column nowrap;
+    order: 1;
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.history-section p {
+    text-align: justify;
+}
+
+.history-section div + p {
+    order: 0;
+}
+
+.history-section div + p + p {
+    order: 2;
+}
+
+.adventures {
+    padding: 1rem 0.5rem;
+    background-color: var(--accent1-color);
+    /* margin-top: 1rem; */
+}
+
+.adventures h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.adventures-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.adventures-gallery figcaption {
+    font-family: var(--paragraph-font), sans-serif;
+    text-align: center;
+}
+
+.adventures-gallery img {
+    width: 100%;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-links a {
     text-decoration: none;
+    margin-right: 8px;
 }
 
 .social-links img {
-    width: 64px;
+    width: 32px;
 }
