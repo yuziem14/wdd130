@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --header-font: 'Poppins', sans-serif;
+    --text-font: 'Roboto', sans-serif;
+    --dark-color: #262730;
+    --code-color: #333;
+    --light-color: #f1faee;
+    --background-color: #FDF7FA;
+    --action-color: #32004f;
+    --action-hover-color: #27003D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+
+header, main, footer {
+    max-width: 40vw;
+    margin: 0 auto;
+    box-shadow: 4px 8px 16px var(--dark-color);
+}
+
+header, footer {
+    background-color: var(--dark-color);
+    padding: 0.4rem;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    width: 32px;
+    margin-right: 1rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header h1, footer p {
+    color: var(--light-color);
+    font-family: var(--header-font);
+    font-weight: 700;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 1rem 0;
+}
+
+input, textarea, select {
+    display: block;
+    width: 100%;
+    min-height: 2rem;
+    border: 1px solid var(--action-color);
+    outline: 0;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+input:focus, textarea:focus, select:focus {
+    border: 0;
+    border-bottom: 2px solid var(--action-color);
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+form {
+    width: 80%;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    font-family: var(--text-font);
+    font-size: 1.5rem;
+    background-color: var(--action-color);
+    color: var(--light-color);
+    padding: 1.2rem;
+    border: 0;
+    border-radius: 0.4rem;
+    box-shadow: 2px 4px 8px var(--dark-color);
+}
+
+form button:hover {
+    background-color: var(--action-hover-color);
+    transition: 0.5s;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.code {
+    width: 100%;
+    color: var(--light-color);
+    background-color: var(--code-color);
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.code span {
+    display: block;
+    margin-left: 1rem;
+}
+
+.code span:last-child, .code span:first-child {
+    margin: 0;
+}
