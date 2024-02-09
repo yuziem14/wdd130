@@ -33,7 +33,7 @@ h2 {
     font-size: 2rem;
 }
 
-p, header nav a {
+figcaption, p, header nav a {
     font-family: var(--paragraph-font);
     color: var(--paragraph-color);
 }
@@ -217,4 +217,112 @@ footer p {
 
 .social-links img {
     width: 32px;
+}
+
+/* Contact Page */
+#wwr-contact, #wwr-employees {
+    background-color: var(--accent1-color);
+}
+
+#wwr-contact, #wwr-employees, #wwr-contact-form {
+    padding: 1rem;
+}
+
+#wwr-contact h1 {
+    text-align: center;
+}
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    align-items: end;
+    justify-content: center;
+}
+
+.contact-info .contact-info-details {
+    order: 0;
+}
+
+.contact-info .contact-info-intro {
+    align-self: center;
+    order: 1;
+    text-align: center;
+}
+
+.contact-info .contact-info-map {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    order: 2;
+}
+
+.contact-info .contact-info-map h2 {
+    width: 96%;
+    text-align: center;
+}
+
+.contact-info .contact-info-map iframe {
+    width: 96%;
+    height: 200px;
+}
+
+.contact-info .contact-info-details img {
+    width: 24px;
+    margin-right: 8px;
+}
+
+.contact-info .contact-info-details .info-group {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+#wwr-employees {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    align-items: end;
+    justify-content: space-between;
+}
+
+#wwr-employees h2 {
+    text-align: center;
+    grid-column: 1 / 5;
+    margin-bottom: 2rem;
+}
+
+#wwr-employees figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wwr-employees figure img {
+    max-width: 176px;
+    border-radius: 100%;
+}
+
+#wwr-employees figure figcaption {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#wwr-contact-form {
+}
+
+#wwr-contact-form .form-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wwr-contact-form .form-header img {
+    width: 40px;
+    margin-left: 8px;
 }
