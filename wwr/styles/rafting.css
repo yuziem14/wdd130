@@ -313,16 +313,111 @@ footer p {
 }
 
 #wwr-contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/rafting-adventure.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#wwr-contact-form form {
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(239, 239, 240, 0.6);
+    padding: 2rem;
 }
 
 #wwr-contact-form .form-header {
-    width: 100%;
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(239, 239, 240, 0.6);
+    padding: 0.4rem;
+    margin-bottom: 1rem;
 }
 
 #wwr-contact-form .form-header img {
     width: 40px;
     margin-left: 8px;
+}
+
+#wwr-contact-form .form-group {
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#wwr-contact-form .form-group input[type="checkbox"],
+#wwr-contact-form .form-group input[type="radio"],
+#wwr-contact-form .form-group input[type="radio"] + label,
+#wwr-contact-form .form-group input[type="checkbox"] + label {
+    display: inline;
+    font-weight: 600;
+    width: fit-content;
+    font-size: 0.7rem;
+}
+
+#wwr-contact-form .form-group input[type="checkbox"] + label {
+    font-size: 1rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+}
+
+#wwr-contact-form .purpose-options {
+    display: flex;
+    align-items: center;
+}
+
+#wwr-contact-form .purpose-options .form-input {
+    display: flex;
+    align-items: center;
+    margin-right: 0.8rem;
+}
+
+#wwr-contact-form .purpose-options .form-input label {
+    margin: 0;
+    margin-left: 0.2rem;
+}
+
+.form-group p,
+.form-group input,
+.form-group label,
+.form-group textarea {
+    display: block;
+    font-family: var(--paragraph-font);
+    color: var(--accent2-color);
+    font-weight: 700 ;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.2rem;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    border: 1px solid var(--accent2-color);
+}
+
+.form-group textarea {
+    max-width: 100%;
+}
+
+#wwr-contact-form form button {
+    min-width: 200px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    padding: 0.8rem;
+    background-color: #ff7900;
+    color: var(--accent1-color);
+    font-weight: 700;
+    font-family: var(--paragraph-font);
+    box-shadow: 2px 4px 16px 4px var(--paragraph-color);
 }
