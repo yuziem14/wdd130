@@ -100,6 +100,33 @@ footer p {
     text-align: center;
 }
 
+table {
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid var(--paragraph-color);
+}
+
+table th, table td {
+    padding: 0.5rem;
+}
+
+table td {
+    font-size: 0.8rem;
+}
+
+thead th, thead tr {
+    background-color: var(--accent1-color);
+}
+
+thead {
+    border-bottom: 1px solid var(--paragraph-color);
+}
+
+tbody {
+    background-color: white;
+}
+
 /* CSS Class Selectors */
 .hero {
     position: relative;
@@ -265,6 +292,9 @@ footer p {
 .contact-info .contact-info-map iframe {
     width: 96%;
     height: 200px;
+    border: 0;
+    outline: 0;
+    box-shadow: 2px 2px 16px 0px #333;
 }
 
 .contact-info .contact-info-details img {
@@ -420,4 +450,188 @@ footer p {
     font-weight: 700;
     font-family: var(--paragraph-font);
     box-shadow: 2px 4px 16px 4px var(--paragraph-color);
+}
+
+/* Trips Page */
+main#trips-page .container {
+    max-width: 64%;
+    margin: 0 auto;
+}
+
+main#trips-page .btn {
+    display: block;
+    min-width: 100%;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    padding: 0.8rem;
+    background-color: #ff7900;
+    color: var(--accent1-color);
+    font-weight: 700;
+    font-family: var(--paragraph-font);
+    text-decoration: none;
+}
+
+#wwr-trips {
+    position: relative;
+    background-image: url(../images/trips-bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 75%;
+    min-height: 48vh;
+}
+
+#wwr-trips::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(239, 239, 240, 0.64);
+}
+
+#wwr-trips, #wwr-trips .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#wwr-trips .container {
+    text-align: center;
+}
+
+#wwr-trips h1 {
+    margin-bottom: 16px;
+}
+
+#wwr-trips p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+#wwr-trips p + p {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: var(--paragraph-color);
+}
+
+#wwr-trips p + p > span {
+    display: block;
+}
+
+#wwr-trips a.contact-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+#wwr-trips a.contact-action img {
+    max-width: 24px;
+    margin-right: 0.5rem;
+}
+
+main#trips-page #wwr-trips-catalog .container {
+    max-width: 96%;
+}
+
+#wwr-trips-catalog .catalog-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+#wwr-trips-catalog .catalog-header img {
+    max-width: 40px;
+    margin-left: 8px;
+}
+
+#wwr-trips-catalog article {
+    background-color: var(--accent1-color);
+    padding: 2rem 1rem;
+}
+
+#wwr-trips-catalog article .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+}
+
+
+#wwr-trips-catalog .rated-trips {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.rated-trips .trip-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 240px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 16px 2px rgba(0, 0, 0, 0.4);
+}
+
+.trip-card-logo { 
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.trip-card .trip-header {
+    text-align: justify;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.trip-card .trip-header h3 {
+    color: var(--paragraph-color);
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.trip-card .trip-info {
+    width: 100%;
+    text-align: justify;
+    font-style: italic;
+    font-size: 0.88rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+main#trips-page .trip-card .btn.reserve-trip {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    min-width: 88%;
+    margin: 1rem;
+}
+
+.all-trips {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.all-trips table {
+    margin-top: 64px;
+}
+
+main#trips-page .btn:hover {
+    transition: 0.4s;
+    background-color: #F57200;
 }
