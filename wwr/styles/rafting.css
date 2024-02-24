@@ -49,6 +49,7 @@ header {
     align-items: center;
     padding: 1rem;
     background-color: var(--primary-color);
+    max-height: 144px;
 }
 
 header img {
@@ -458,7 +459,7 @@ main#trips-page .container {
     margin: 0 auto;
 }
 
-main#trips-page .btn {
+main#trips-page .btn, main#home-page .btn {
     display: block;
     min-width: 100%;
     border: 0;
@@ -634,4 +635,145 @@ main#trips-page .trip-card .btn.reserve-trip {
 main#trips-page .btn:hover {
     transition: 0.4s;
     background-color: #F57200;
+}
+
+/* Home Page */
+#wwr-home-hero {
+    position: relative;
+    background-image: url(../images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 75%;
+    min-height: calc(100vh - 144px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#wwr-home-hero::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(239, 239, 240, 0.32);
+}
+
+#wwr-home-hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 72%;
+    margin: 0 auto;
+}
+
+#wwr-home-hero .container h1,
+#wwr-home-hero .container h2,
+#wwr-home-hero p {
+    text-align: center;
+}
+
+#wwr-home-hero .container h1 {
+    margin-bottom: 16px;
+}
+
+#wwr-home-hero h1 + p {
+    margin-bottom: 32px;
+}
+
+#wwr-home-hero .newsletter-form h2 {
+    text-align: center;
+    font-weight: 700;
+    color: var(--paragraph-color);
+    margin-bottom: 16px;
+}
+
+#wwr-home-hero .newsletter-form form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    max-width: 88%;
+    margin: 0 auto;
+}
+
+#wwr-home-hero .newsletter-form input {
+    padding: 0.6rem;
+}
+
+#wwr-home-hero .newsletter-form form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 3;
+    font-size: 1.2rem;
+}
+
+#wwr-home-hero .newsletter-form form button img {
+    max-width: 24px;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+#wwr-home-content .content-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+#wwr-home-content .content-header img {
+    max-width: 80px;
+    margin-left: 16px;
+}
+
+#wwr-home-content article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--accent1-color);
+}
+
+#wwr-home-content article .images-mosaic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#wwr-home-content article .images-mosaic img {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+#wwr-home-content article .images-mosaic img:last-of-type {
+    grid-column: 1 / 3;
+}
+
+#wwr-home-content article .content-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 88%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+#wwr-home-content article .content-body h2 {
+    margin-bottom: 24px;
+}
+
+#wwr-home-content article .content-body p {
+    margin-bottom: 32px;
+}
+
+#wwr-home-content article .content-body a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+#wwr-home-content article .content-body img {
+    max-width: 32px;
+    margin-right: 16px;
 }
